@@ -1,11 +1,16 @@
-{ config, lib, pkgs, ... }:
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./config/system/_system-imports.nix
-    ];
-	
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./config/system/_system-imports.nix
+  ];
+
   nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
       inherit pkgs;
@@ -16,14 +21,20 @@
     isNormalUser = true;
     useDefaultShell = true;
     description = "Lex";
-    extraGroups = [ "networkmanager" "wheel" "video" "storage" "libvirtd" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+      "storage"
+      "libvirtd"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Home-Manager
   home-manager = {
-  	useUserPackages = true;
-  	useGlobalPkgs = true;
+    useUserPackages = true;
+    useGlobalPkgs = true;
     users.lex = import ./home;
     backupFileExtension = "backup";
   };
@@ -39,4 +50,3 @@
 
   system.stateVersion = "24.11";
 }
-

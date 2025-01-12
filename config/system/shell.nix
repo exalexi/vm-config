@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   users.defaultUserShell = pkgs.fish;
 
   programs.fish = {

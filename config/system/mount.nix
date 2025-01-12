@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   # USB Stick mounting
   services.gvfs.enable = true;

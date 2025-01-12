@@ -1,9 +1,12 @@
-{ ... }: {
+{ ... }:
+{
   networking = {
     hostName = "novanix";
     networkmanager.enable = true;
     useDHCP = false;
-    defaultGateway = { address = "192.168.178.1"; }; 
+    defaultGateway = {
+      address = "192.168.178.1";
+    };
     nameservers = [ "192.168.178.1" ];
     interfaces = {
       ens18.ipv4.addresses = [
@@ -12,7 +15,7 @@
           prefixLength = 24;
         }
       ];
-      #ens18.useDHCP = true;	
+      #ens18.useDHCP = true;
     };
   };
 }

@@ -1,6 +1,6 @@
-{ ... }: {
-  imports =
-  [
+{ ... }:
+{
+  imports = [
     ./-system-packages.nix
     ./boot.nix
     ./greetd.nix

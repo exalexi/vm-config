@@ -1,7 +1,8 @@
-{ ... }: {
+{ ... }:
+{
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
-  
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -16,7 +17,7 @@
     LC_TELEPHONE = "de_DE.UTF-8";
     LC_TIME = "de_DE.UTF-8";
   };
-  
+
   # Configure console keymap
   console.keyMap = "de-latin1-nodeadkeys";
 }

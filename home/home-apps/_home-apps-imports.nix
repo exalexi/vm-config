@@ -1,6 +1,7 @@
-{ ... }: {
+{ ... }:
+{
   imports = [
-    ./-home-packages.nix 
+    ./-home-packages.nix
     ./git.nix
   ];
 }
