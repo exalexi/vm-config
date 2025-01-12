@@ -4,6 +4,7 @@
     networkmanager.enable = true;
     useDHCP = false;
     defaultGateway = { address = "192.168.178.1"; }; 
+    nameservers = [ "192.168.178.1" ];
     interfaces = {
       ens18.ipv4.addresses = [
         {

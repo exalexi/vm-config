@@ -21,13 +21,13 @@
     {
 
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-      nixosConfigurations.Lextop = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.novanix = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           home-manager.nixosModules.home-manager
           ./configuration.nix
           {
-            home-manager.users.lexi = {
+            home-manager.users.lex = {
               imports = [
                 ./home/default.nix
               ];
