@@ -10,5 +10,6 @@
     ./shell.nix
     ./ssh.nix
     ./thermald.nix
+    #./wireguard.nix
   ];
 }

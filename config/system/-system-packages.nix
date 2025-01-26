@@ -26,5 +26,6 @@
     fish
     # AdoptOpenJDK
     temurin-bin
+    wireguard-tools
   ];
 }
